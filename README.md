@@ -19,3 +19,6 @@ Crea un file json con dei dati multivariati: ci sono 10 data-cases e ogni data-c
 Create a json file with multivariate data: there are 10 data-cases and each data-case has five quantitative (numeric) variables, having all positive values. Draw this dataset with a "star plot" ("radar chart" ...). Upon left-clicking an edge of a polygon of a data-point, this should become filled with colour, while all others should remain transparent. Do so through a smooth animation. Use d3.js scales to map the domain of (arbitrary) variable values on the range of coordinates values, that depends on your interface.
 
 =======================================================
+
+
+![chart-example](https://user-images.githubusercontent.com/19305436/120315122-4a4bb000-c2dc-11eb-9504-5dc23ad2497e.png)
