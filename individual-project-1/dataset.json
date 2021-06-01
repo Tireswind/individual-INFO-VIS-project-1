@@ -1,0 +1,252 @@
+[
+{
+		"key": "Placeholder",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 0
+			},
+			{
+				"axis": "Speed",
+				"value": 0
+			},
+			{
+				"axis": "Precision",
+				"value": 0
+			},
+			{
+				"axis": "Persistence",
+				"value": 0
+			},
+			{
+				"axis": "Range",
+				"value": 0
+			}
+		]
+	},
+	{
+		"key": "Star Platinum",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 5
+			},
+			{
+				"axis": "Speed",
+				"value": 5
+			},
+			{
+				"axis": "Precision",
+				"value": 5
+			},
+			{
+				"axis": "Persistence",
+				"value": 5
+			},
+			{
+				"axis": "Range",
+				"value": 3
+			}
+		]
+	},
+	{
+		"key": "Sticky Fingers",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 5
+			},
+			{
+				"axis": "Speed",
+				"value": 5
+			},
+			{
+				"axis": "Precision",
+				"value": 3
+			},
+			{
+				"axis": "Persistence",
+				"value": 2
+			},
+			{
+				"axis": "Range",
+				"value": 3
+			}
+		]
+	},
+	{
+		"key": "Heremit Purple",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 2
+			},
+			{
+				"axis": "Speed",
+				"value": 3
+			},
+			{
+				"axis": "Precision",
+				"value": 2
+			},
+			{
+				"axis": "Persistence",
+				"value": 5
+			},
+			{
+				"axis": "Range",
+				"value": 2
+			}
+		]
+	},
+	{
+		"key": "Cream",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 4
+			},
+			{
+				"axis": "Speed",
+				"value": 4
+			},
+			{
+				"axis": "Precision",
+				"value": 3
+			},
+			{
+				"axis": "Persistence",
+				"value": 3
+			},
+			{
+				"axis": "Range",
+				"value": 2
+			}
+		]
+	},
+	{
+		"key": "Crazy Diamond",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 5
+			},
+			{
+				"axis": "Speed",
+				"value": 5
+			},
+			{
+				"axis": "Precision",
+				"value": 4
+			},
+			{
+				"axis": "Persistence",
+				"value": 4
+			},
+			{
+				"axis": "Range",
+				"value": 2
+			}
+		]
+	},
+	{
+		"key": "Heaven's Door",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 2
+			},
+			{
+				"axis": "Speed",
+				"value": 4
+			},
+			{
+				"axis": "Precision",
+				"value": 3
+			},
+			{
+				"axis": "Persistence",
+				"value": 4
+			},
+			{
+				"axis": "Range",
+				"value": 4
+			}
+		]
+	},
+	{
+		"key": "The Hand",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 1
+			},
+			{
+				"axis": "Speed",
+				"value": 4
+			},
+			{
+				"axis": "Precision",
+				"value": 1
+			},
+			{
+				"axis": "Persistence",
+				"value": 3
+			},
+			{
+				"axis": "Range",
+				"value": 5
+			}
+		]
+	},
+	{
+		"key": "Gold Experience",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 3
+			},
+			{
+				"axis": "Speed",
+				"value": 5
+			},
+			{
+				"axis": "Precision",
+				"value": 3
+			},
+			{
+				"axis": "Persistence",
+				"value": 2
+			},
+			{
+				"axis": "Range",
+				"value": 3
+			}
+		]
+	},
+	{
+		"key": "Tohth",
+		"values": [
+			{
+				"axis": "Power",
+				"value": 1
+			},
+			{
+				"axis": "Speed",
+				"value": 1
+			},
+			{
+				"axis": "Precision",
+				"value": 1
+			},
+			{
+				"axis": "Persistence",
+				"value": 5
+			},
+			{
+				"axis": "Range",
+				"value": 1
+			}
+		]
+	}
+]

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+<title>Polygonal D3.js Star (radar) Chart</title>
+
+<!-- Google fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'
+	rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway'
+	rel='stylesheet' type='text/css'>
+
+<!-- D3.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"
+	charset="utf-8"></script>
+
+<style>
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+	font-weight: 300;
+	fill: #242424;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+	cursor: default;
+}
+
+.legend {
+	font-family: 'Raleway', sans-serif;
+	fill: #333333;
+}
+
+.tooltip {
+	fill: #333333;
+}
+</style>
+
+</head>
+<body style="font-size: 15px">
+<!-- Checkbox created to involve the user and perform specific selections and interactions -->
+	<div style="text-align: left; margin-left: 30px; padding-top: 20px;">
+		<fieldset class="group" style="display: -webkit-inline-box;">
+			<legend>Select Stands to display</legend>
+			<ul class="checkbox" id="checkboxes"
+				style="list-style-type: none; margin: 0; padding: 0;">
+
+			</ul>
+		</fieldset>
+		<div class="radarChart" id="divStands" 
+			style="text-align: center; margin-top: -200px;"></div>
+	</div>
+
+	<script src="radarChart.js"></script>
+	<script>
+		
+		//--Set-Up--
+ 
+		var initialFilter = [0];
+		var standNames = [""];
+
+		var margin = {
+			top : 100,
+			right : 100,
+			bottom : 100,
+			left : 100
+		}, width = Math.min(800, window.innerWidth - 10) - margin.left
+				- margin.right, height = Math.min(width, window.innerHeight
+				- margin.top - margin.bottom - 20);
+
+		 
+		//--Draw the chart--
+
+		//Color scale
+		var color = d3.scale.ordinal().range(
+				[ "#ffffff", "#EDC951", "#CC333F", "#00A0B0","#8D6C9F","#71dd13","#FF7849","#0e0ec2","#ffc0cb","#fff3e1" ]);
+
+		var radarChartOptions = {
+			w : width,
+			h : height,
+			margin : margin,
+			maxValue : 0.5,
+			levels : 5,
+			roundStrokes : false,
+			color : color
+		};
+		
+		//Map json data to the html checkbox
+		d3.json("dataset.json", function(error, data) {
+
+			var myDiv = document.getElementById("checkboxes");
+
+			var mapData = data;
+			var keys = [];
+			mapData.forEach(function(item) {
+				keys.push(item.key);
+			});
+
+			for (var i = 1; i < keys.length; i++) {
+				var listElement = document.createElement("LI");
+				var checkBox = document.createElement("input");
+				var label = document.createElement("label");
+				checkBox.type = "checkbox";
+				checkBox.value = keys[i];
+				checkBox.checked = false;
+				checkBox.onchange = loadStands;
+
+				myDiv.appendChild(checkBox);
+				myDiv.appendChild(label);
+				label.appendChild(document.createTextNode(keys[i]));
+				listElement.id = i;
+				listElement.appendChild(checkBox);
+				listElement.append(label);
+				myDiv.appendChild(listElement);
+
+			}
+
+			function loadStands() {
+				initialFilter = [0];
+				standNames = [0];
+				var htmlCollection = document.getElementById("checkboxes")
+						.getElementsByTagName("input");
+				var stands = Array.from(htmlCollection);
+
+				for (var i = 0; i < stands.length; i++) {
+					if (stands[i].checked) {
+						initialFilter.push(i+1);
+						standNames.push(stands[i].value);
+					}
+				}
+				RadarChart(".radarChart", data, radarChartOptions,
+						initialFilter, standNames);
+			}
+
+		});
+
+		//Draw the chart without the data
+		d3.json("dataset.json", function(error, data) {
+			RadarChart(".radarChart", data, radarChartOptions, initialFilter);
+		});
+	</script>
+</body>
+</html>
