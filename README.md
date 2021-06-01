@@ -2,6 +2,7 @@
 
 This repository shows the files for the first individual INFO-VIS project, implemented by Alessandra Flaccavento for Università degli Studi di Roma Tre course "Visualizzazione delle Informazioni".
 
+D3.js and Javascript were used to meet the requirements.
 Code references are expressed within the code.
 
 Project specifications for easier reference:
